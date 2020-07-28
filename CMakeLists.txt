@@ -66,11 +66,11 @@ endif(WIN32)
 
 # COPYING file
 configure_file (
-  "${PROJECT_SOURCE_DIR}/crond.d/daily.in"
-  "${PROJECT_BINARY_DIR}/crond.d/${APPLICATION_PACKAGE_NAME}-daily"
+  "${PROJECT_SOURCE_DIR}/cron.d/daily.in"
+  "${PROJECT_BINARY_DIR}/cron.d/${APPLICATION_PACKAGE_NAME}-daily"
   NEWLINE_STYLE ${AUTO_NEWLINE_STYLE}
 )
-install(FILES "${PROJECT_BINARY_DIR}/crond.d/${APPLICATION_PACKAGE_NAME}-daily" DESTINATION ${INSTALL_PATH_SHARE}/crond.d/)
+install(FILES "${PROJECT_BINARY_DIR}/cron.d/${APPLICATION_PACKAGE_NAME}-daily" DESTINATION ${INSTALL_PATH_SHARE}/cron.d/)
 
 # Reboot script
 install(FILES "${PROJECT_SOURCE_DIR}/scripts/reboot.sh" DESTINATION ${INSTALL_PATH_SHARE}/scripts/)
