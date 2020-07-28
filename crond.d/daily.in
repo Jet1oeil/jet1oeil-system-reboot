@@ -5,4 +5,5 @@
 # To activate this cron file you have to uncomment the lines below.
 # Feel free to adapt it to your needs.
 
-30 3    * * *           root    /usr/share/${APPLICATION_PACKAGE_NAME}/scripts/reboot.sh
+0 */4   * * *           root    /usr/share/${APPLICATION_PACKAGE_NAME}/scripts/reboot.sh
+#30 3    * * *           root    /usr/share/${APPLICATION_PACKAGE_NAME}/scripts/reboot.sh
