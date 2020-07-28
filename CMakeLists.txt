@@ -73,7 +73,12 @@ configure_file (
 install(FILES "${PROJECT_BINARY_DIR}/cron.d/${APPLICATION_PACKAGE_NAME}-daily" DESTINATION ${INSTALL_PATH_SHARE}/cron.d/)
 
 # Reboot script
-install(FILES "${PROJECT_SOURCE_DIR}/scripts/reboot.sh" DESTINATION ${INSTALL_PATH_SHARE}/scripts/)
+configure_file (
+  "${PROJECT_SOURCE_DIR}/scripts/reboot.sh.in"
+  "${PROJECT_BINARY_DIR}/scripts/reboot.sh"
+  NEWLINE_STYLE ${AUTO_NEWLINE_STYLE}
+)
+install(PROGRAMS "${PROJECT_BINARY_DIR}/scripts/reboot.sh" DESTINATION ${INSTALL_PATH_SHARE}/scripts/)
 
 ############################
 # Common files installation

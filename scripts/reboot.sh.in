@@ -1,0 +1,4 @@
+#!/bin/bash
+
+logger ${APPLICATION_PACKAGE_NAME} scheduled a reboot
+/usr/sbin/reboot
